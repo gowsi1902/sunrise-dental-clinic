@@ -49,7 +49,35 @@ v1.0.0
 
 ## CI / CD (excellent band)
 
-`.github/workflows/backend-tests.yml` runs `mvn -B test` in `backend/` on push and pull request (Java 17, Temurin). After the repo is public, paste a screenshot of a green run into the PDF. Deploy of the WAR to a public host is optional; markers mainly want the workflow file plus several dated commits.
+The brief marks CI as **optional** for the excellent band. A public live host is **not** required. This repo uses GitHub Actions as the pipeline.
+
+**Workflow file:** `.github/workflows/backend-tests.yml` (workflow name: `CI`)
+
+| Stage | What runs | Why it is in the assignment |
+|---|---|---|
+| **CI — backend** | `mvn -B test` (JUnit 5, Java 17 Temurin) | Task C automation on every push and pull request |
+| **CD — backend** | `mvn -B -DskipTests package` → upload `sunrise.war` | Repeatable build of the distributed web app |
+| **CD — frontend** | `npm ci` + `npm run build` → upload `frontend/dist` | Repeatable production UI bundle |
+
+Triggers: push to `main`/`master`, pull requests, and **Run workflow** (manual) on the Actions tab.
+
+```
+commit / pull request
+        ↓
+GitHub Actions (ubuntu-latest)
+        ├── backend: JUnit → sunrise.war artefact
+        └── frontend: npm build → dist artefact
+        ↓
+green tick on the commit (screenshot this for the PDF)
+```
+
+### Screenshot for the PDF
+
+1. Push this workflow to the **public** GitHub repo.
+2. Open **Actions** → latest **CI** run → confirm both jobs are green.
+3. Paste that screenshot plus a local `mvn test` Surefire summary into the report.
+
+Deploy of the WAR to a public cloud host is **not** required by the brief. Artifacts on Actions are enough to show continuous delivery of a build.
 
 ## `.gitignore`
 

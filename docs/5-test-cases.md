@@ -10,7 +10,7 @@ TDD cycle used:
 2. Implement `total()` and `slotClash()`.
 3. Call the same methods from `AppointmentService` / `BillingService` (green on real bookings).
 
-Automation: `mvn -f backend test` (Surefire + JUnit 5) locally, and `.github/workflows/backend-tests.yml` on each push. Screenshot the Surefire summary and a green Actions run for the PDF.
+Automation: `mvn -f backend test` (Surefire + JUnit 5) locally, and GitHub Actions (`.github/workflows/backend-tests.yml`) on each push. The same workflow then packages `sunrise.war` and builds the React frontend. Screenshot the Surefire summary and a green Actions run for the PDF.
 
 ## Automated tests
 

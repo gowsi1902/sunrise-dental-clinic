@@ -39,7 +39,7 @@ Every row is traced to **[docs/0-assessment-brief.md](0-assessment-brief.md)**, 
 |---|---|
 | A | [4.3-uml-diagrams.md](4.3-uml-diagrams.md) |
 | C | [5-test-cases.md](5-test-cases.md), `ClinicCalculatorTest` |
-| D | [6-git-workflow.md](6-git-workflow.md), `.github/workflows/backend-tests.yml` |
+| D | [6-git-workflow.md](6-git-workflow.md), `.github/workflows/backend-tests.yml` (JUnit + WAR + frontend build) |
 
 ## Deliberate non-goals (stated assumptions)
 

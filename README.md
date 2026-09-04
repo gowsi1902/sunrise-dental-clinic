@@ -4,6 +4,8 @@ A **distributed Java web application** for **Sunrise Dental Clinic, Colombo**. R
 
 GitHub: [https://github.com/gowsi1902/sunrise-dental-clinic](https://github.com/gowsi1902/sunrise-dental-clinic)
 
+[![CI](https://github.com/gowsi1902/sunrise-dental-clinic/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/gowsi1902/sunrise-dental-clinic/actions/workflows/backend-tests.yml)
+
 ## Tech stack
 
 | Layer | Choice |
@@ -57,3 +59,12 @@ UI: [http://localhost:5173](http://localhost:5173) — Vite proxies `/sunrise` t
 6. Exit system (sign out)
 
 Also included: overlap check, admin stats, and audit log.
+
+## CI / CD (Task D)
+
+GitHub Actions (`.github/workflows/backend-tests.yml`) runs on every push and pull request:
+
+1. **CI** — `mvn -B test` (JUnit billing and slot rules)
+2. **CD** — package `sunrise.war` and build the React frontend; both are stored as workflow artifacts
+
+A public cloud host is not required by the brief. After the repo is public, open **Actions**, wait for a green run, and put that screenshot in the PDF.

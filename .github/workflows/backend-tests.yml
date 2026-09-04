@@ -1,12 +1,16 @@
-name: Backend tests
+# Task D (excellent band) + Task C automation.
+# CI: JUnit on every push/PR. CD: package WAR + frontend (no public host required).
+name: CI
 
 on:
   push:
     branches: [main, master]
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  junit:
+  backend:
+    name: Backend tests and WAR
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,6 +19,35 @@ jobs:
           distribution: temurin
           java-version: "17"
           cache: maven
-      - name: Run automated tests (Task C)
+      - name: Run JUnit tests (Task C)
         working-directory: backend
         run: mvn -B test
+      - name: Package WAR
+        working-directory: backend
+        run: mvn -B -DskipTests package
+      - name: Upload sunrise.war
+        uses: actions/upload-artifact@v4
+        with:
+          name: sunrise-war
+          path: backend/target/sunrise.war
+
+  frontend:
+    name: Frontend production build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Install and build
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+      - name: Upload frontend dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: frontend/dist
