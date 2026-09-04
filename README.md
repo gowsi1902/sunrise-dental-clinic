@@ -4,7 +4,7 @@ CIS6003 Advanced Programming WRIT1: a **distributed Java web application** for *
 
 Student name: `[Your Name]`  
 Student ID: `[Your Student ID]`  
-GitHub: `[public repository URL]`
+GitHub: `https://github.com/gowsi1902/sunrise-dental-clinic`
 
 The PDF cover title says “Online vehicle reservation System”; **ignore that.** The scenario, functions, and Tasks A–D are in [docs/0-assessment-brief.md](docs/0-assessment-brief.md). Traceability to this codebase: [docs/0-alignment-checklist.md](docs/0-alignment-checklist.md).
 
