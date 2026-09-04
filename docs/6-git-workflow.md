@@ -51,7 +51,7 @@ v1.0.0
 
 The brief marks CI as **optional** for the excellent band. A public live host is **not** required. This repo uses GitHub Actions as the pipeline.
 
-**Workflow file:** `.github/workflows/backend-tests.yml` (workflow name: `CI`)
+**Workflow file:** `.github/workflows/backend-tests.yml` (workflow name: `Sunrise Dental Clinic CI`)
 
 | Stage | What runs | Why it is in the assignment |
 |---|---|---|
@@ -65,8 +65,8 @@ Triggers: push to `main`/`master`, pull requests, and **Run workflow** (manual) 
 commit / pull request
         ↓
 GitHub Actions (ubuntu-latest)
-        ├── backend: JUnit → sunrise.war artefact
-        └── frontend: npm build → dist artefact
+        ├── Test billing rules and package WAR
+        └── Build reception staff UI
         ↓
 green tick on the commit (screenshot this for the PDF)
 ```
