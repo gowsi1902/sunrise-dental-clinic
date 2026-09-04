@@ -1,0 +1,43 @@
+# Assignment brief (not part of the submitted source tree)
+*.pdf
+
+# AI / planner files
+.cursor/
+.cursorignore
+docs/ai/
+AGENTS.md
+*.canvas.tsx
+*.plan.md
+.plans/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Java / Maven
+backend/target/
+*.class
+*.jar
+*.war
+hs_err_pid*
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Logs and OS
+*.log
+*.tmp
+Thumbs.db
+.DS_Store
+
+# Local database secrets (commit the example file only)
+backend/src/main/resources/db.properties
+
+# Local tool downloads
+.tools/

@@ -1,0 +1,5 @@
+# Copy to db.properties and adjust MySQL login. db.properties is gitignored.
+
+db.url=jdbc:mysql://localhost:3306/sunrise_dental?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Colombo
+db.user=root
+db.password=12345678
