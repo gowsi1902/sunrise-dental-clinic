@@ -1,12 +1,8 @@
 # Sunrise Dental Clinic — Appointment System
 
-CIS6003 Advanced Programming WRIT1: a **distributed Java web application** for **Sunrise Dental Clinic, Colombo**. Reception staff register patients, prevent double-booked dentists, search visits by appointment number, and print bills (treatment fee + consultation fee).
+A **distributed Java web application** for **Sunrise Dental Clinic, Colombo**. Reception staff register patients, prevent double-booked dentists, search visits by appointment number, and print bills (treatment fee + consultation fee).
 
-Student name: `[Your Name]`  
-Student ID: `[Your Student ID]`  
-GitHub: `https://github.com/gowsi1902/sunrise-dental-clinic`
-
-The PDF cover title says “Online vehicle reservation System”; **ignore that.** The scenario, functions, and Tasks A–D are in [docs/0-assessment-brief.md](docs/0-assessment-brief.md). Traceability to this codebase: [docs/0-alignment-checklist.md](docs/0-alignment-checklist.md).
+GitHub: [https://github.com/gowsi1902/sunrise-dental-clinic](https://github.com/gowsi1902/sunrise-dental-clinic)
 
 ## Tech stack
 
@@ -51,7 +47,7 @@ npm run dev
 
 UI: [http://localhost:5173](http://localhost:5173) — Vite proxies `/sunrise` to Tomcat.
 
-## Brief features
+## Features
 
 1. Login (authorised staff only)  
 2. Register appointment (number auto-issued, patient, dentist, treatment, date/time)  
@@ -60,17 +56,4 @@ UI: [http://localhost:5173](http://localhost:5173) — Vite proxies `/sunrise` t
 5. Help for new staff  
 6. Exit system (sign out)
 
-Extra (allowed by the brief): overlap check, admin stats, audit log, Git-friendly layered design.
-
-## Report notes
-
-Numbered files in [`docs/`](docs/) map to Tasks A–D. Copy into a 4000-word PDF (Times New Roman, Harvard). Keep the assignment brief PDF out of git.
-
-| Task | Marks | Source |
-|---|---|---|
-| Brief (paste into report intro) | — | [docs/0-assessment-brief.md](docs/0-assessment-brief.md) |
-| Alignment | — | [docs/0-alignment-checklist.md](docs/0-alignment-checklist.md) |
-| A UML | 20 | [docs/4.3-uml-diagrams.md](docs/4.3-uml-diagrams.md) |
-| B App + patterns + DB | 40 | code + [docs/3-design-patterns.md](docs/3-design-patterns.md) |
-| C Testing / TDD | 20 | [docs/5-test-cases.md](docs/5-test-cases.md), `ClinicCalculatorTest` |
-| D GitHub versions | 20 | [docs/6-git-workflow.md](docs/6-git-workflow.md), `.github/workflows/backend-tests.yml` |
+Also included: overlap check, admin stats, and audit log.
